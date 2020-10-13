@@ -1,0 +1,73 @@
+.profile{
+	grid-area: profile;
+	padding-left:1%;
+	padding-right: 1%;
+}
+.profile_content__block{
+	background-color: #FFFFFF;
+	height:460px;
+	border-radius: 10px 10px 0px 0px;
+}
+.profile_content__block .background_pic{
+	background-image: url('./norway.jpg');
+	height: 380px;
+	border-radius: 10px 10px 0px 0px;
+	background-size: cover;
+}
+.profile_pic{
+	background-image: url('./ava.jpg');
+	height:130px;
+	width:130px;
+	border-radius: 50%;
+	border:4px solid white;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	line-height: 0.8em;
+}
+.profile_pic a{
+	margin-left:-20px;
+	margin-top:125px;
+	color:#515365;
+	font-weight: bold;
+	width:170px;
+	font-size:20px;
+}
+.profile_pic span{
+	font-size:12px;
+	color:#515365;
+}
+.profile_ava__block{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	margin-top:-110px;
+}
+.profile_nav__block {
+	display: flex;
+	width:25%;
+	margin-left: 8%;
+	justify-content: space-between;
+}
+.profile_nav__block_second {
+	display: flex;
+	margin-left:65%;
+	justify-content: space-between;
+	margin-top:-40px;
+	margin-right: 8%;
+}
+
+.profile_nav__block a , .profile_nav__block_second a {
+	color:#515365;
+	text-decoration: none;
+	font-weight: bold;
+}
+.active:hover {
+	color:orange;
+	text-decoration: none;
+}
+@media all and (max-width: 575px) {
+	.profile_nav__block, .profile_nav__block_second{
+		display: none;
+	}
+}

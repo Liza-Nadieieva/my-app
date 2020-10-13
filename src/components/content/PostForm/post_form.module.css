@@ -1,0 +1,23 @@
+textarea{
+	width:95%;
+	border:none;
+	border-bottom: 1px solid #404058;
+	outline: none;
+}
+.post_block {
+	margin-left:2%;
+	display: grid;
+	grid-gap:10px;
+	grid-template-columns: 50px 1fr;
+	padding-top: 4%;
+	padding-bottom:2%;
+}
+.post_block button{
+	width:100px;
+}
+ img{
+	width:50px;
+	height:50px;
+	border-radius:30px;
+}
+

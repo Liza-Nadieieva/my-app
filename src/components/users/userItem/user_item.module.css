@@ -1,0 +1,23 @@
+.item_block{
+	margin-top:15px;
+	margin-left:20px;
+}
+.item_block img{
+	height:100px;
+	width: 100px;
+	border-radius:50%;
+}
+.item_profile{
+	display: grid;
+	grid-template-columns: 110px 1fr;
+	grid-gap: 10px;
+}
+.item_info{
+	color:#515365;
+	font-weight: bolder;
+	font-size: 20px;
+}
+.item_info div{
+	font-size: 14px;
+	font-weight: normal;
+}

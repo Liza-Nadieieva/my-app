@@ -1,0 +1,25 @@
+.dialog_item a.active{
+	color:#DE5F3C;
+	text-decoration: none;
+}
+.dialog_item a:hover{
+	text-decoration: none;
+	color: orange;
+}
+.dialog_item>*:first-child{
+	height: 48px;
+	width:48px;
+	background-color: orange;
+	border-radius: 30px;
+}
+.dialog_item{
+	display: grid;
+	grid-template-columns: 48px 1fr;
+	grid-gap: 10px;
+	margin-top:10px;
+}
+.dialog_item a{
+	color:#515365;
+	font-weight: bolder;
+
+}

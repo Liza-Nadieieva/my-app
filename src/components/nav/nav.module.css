@@ -1,0 +1,27 @@
+.nav{
+	grid-area: nav;
+	margin-left:4%;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #ffff;
+	padding-top: 8%;
+}
+.item a{
+	color:#515365;
+	font-weight: bolder;
+	line-height: 2.5em;
+	margin-left: 20%;
+}
+.item a:hover{
+	text-decoration: none;
+	color:#515365;
+}
+.item a.active{
+	color: #DE5F3C !important;
+	/*text-decoration: none;*/
+}
+@media all and (max-width: 575px) {
+	.nav{
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+}

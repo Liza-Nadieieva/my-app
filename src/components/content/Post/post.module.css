@@ -1,0 +1,25 @@
+.post_block{
+	color: #888DA8;
+}
+.post_block img{
+	margin-right: 10px;
+	margin-left:2%;
+}
+.post_text__block img{
+	margin-top:15px;
+}
+.post_text__block span{
+	font-weight: bolder;
+	color: #515365;
+}
+.post_text__block div{
+	margin-left:68px;
+	margin-top:-20px;
+}
+.post_like{
+	cursor: pointer;
+	margin-left:2%;
+}
+.post_like i:hover{
+ 	color:red;
+}

@@ -1,0 +1,13 @@
+.friend_block div{
+	height:48px;
+	width:48px;
+	background-color: orange;
+	border-radius:30px;
+}
+.friend_block{
+	width:48px;
+	float: left;
+	text-align: center;
+	margin-right: 10px;
+	font-size: 14px;
+}

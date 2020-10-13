@@ -1,0 +1,18 @@
+.sidebar_block{
+	grid-area: sidebar;
+	margin-right:5%;
+	background-color:#ffff;
+	border-radius: 5px 5px 5px 5px;
+}
+.sidebar_block div{
+	color:#515365;
+	margin-left:5%;
+	padding-top: 10%;
+	font-weight: bolder;
+}
+@media all and (max-width: 575px) {
+	.sidebar_block{
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+}
