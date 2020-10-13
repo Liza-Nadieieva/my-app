@@ -1,4 +1,4 @@
-import {follow, unfollow, setUsers, setCurrentPage, setTotalCount, toggleIsLoading, getUsersThunkCreator} from '/Users/elizavetanadieieva/my-app/src/redux/usersReducer.js';
+import {follow, unfollow, setUsers, setCurrentPage, setTotalCount, toggleIsLoading, getUsers} from '/Users/elizavetanadieieva/my-app/src/redux/usersReducer.js';
 import {connect} from 'react-redux';
 import UsersApiComponent from './UsersApiComponent.jsx';
 
@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
 		isLoading: state.usersPage.isLoading
 	}
 }
-const UsersContainer = connect(mapStateToProps, 
-	{follow,unfollow,setCurrentPage, getUsersThunkCreator})
+const UsersContainer = connect(mapStateToProps,
+	{follow,unfollow,setCurrentPage, getUsers})
 	(UsersApiComponent);
+
 export default UsersContainer;

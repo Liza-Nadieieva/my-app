@@ -2,7 +2,7 @@ import {userApi} from '/Users/elizavetanadieieva/my-app/src/api/api.js';
 
 const FOLLOW = 'follow';
 const UN_FOLLOW = 'unfollow';
-const SET_USERS = 'set-users'; 
+const SET_USERS = 'set-users';
 const SET_CURRENT_PAGE = 'set-current-page';
 const TOTAL_COUNT = 'total-count';
 const TOGGLE_IS_LOADING = 'toggle-is-loading';
@@ -20,8 +20,8 @@ const usersReducer = (state = initial_state, action) => {
 		case FOLLOW:
 		return {
 			...state,
-			users: state.users.map((u) => { 
-				if(u.id === action.userId){ 
+			users: state.users.map((u) => {
+				if(u.id === action.userId){
 					return  {...u, follow: true}
 				}
 			return u;
@@ -32,7 +32,7 @@ const usersReducer = (state = initial_state, action) => {
 			...state,
 			users: state.users.map((u) => {
 				if (u.id === action.userId ){
-					return { ...u, follow: false } 
+					return { ...u, follow: false }
 				}
 			return u;
 			})
@@ -51,11 +51,11 @@ const usersReducer = (state = initial_state, action) => {
 		}
 		default:
 			return state
-	}	
+	}
 }
-export const follow = (userId) => ({ type: FOLLOW, userId  }); // return object 
+export const follow = (userId) => ({ type: FOLLOW, userId  }); // return object
 export const unfollow = (userId) => (
-	{ type: UN_FOLLOW, userId});  
+	{ type: UN_FOLLOW, userId});
 export const setUsers  = (users ) => ({ type: SET_USERS, users });
  // мы запросим пользователей с сервера и закинем в state
 export const setCurrentPage = (currentPage) =>({ type: SET_CURRENT_PAGE, currentPage});
@@ -63,7 +63,7 @@ export const setTotalCount = (totalCount) =>({ type: TOTAL_COUNT, totalCount: to
 export const toggleIsLoading= (isLoading) =>({ type: TOGGLE_IS_LOADING, isLoading});
 
 
-export const getUsersThunkCreator = (currentPage, pageSize) => {
+export const getUsers = (currentPage, pageSize) => {
 	return (dispatch) => {
 		dispatch(toggleIsLoading(true));
 		userApi.getUsers(currentPage, pageSize).then(response => {
@@ -71,7 +71,7 @@ export const getUsersThunkCreator = (currentPage, pageSize) => {
 			dispatch(setTotalCount({total_count: response.data.total_count}));
 			dispatch(setUsers(response.data.users)) ;
 		});
-	} 
+	}
 }
 
 

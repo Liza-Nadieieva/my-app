@@ -4,7 +4,7 @@ import dialogsReducer from './dialogsReducer.js';
 import sidebarReducer from './sidebarReducer.js';
 import usersReducer from './usersReducer.js';
 import UsersProfileReducer from './UsersProfileReducer.js';
-import thunkMiddleware from 'redux-thunk';
+import thunk from 'redux-thunk';
 
 
 
@@ -16,6 +16,6 @@ let reducers = combineReducers({
 	usersProfile: UsersProfileReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(thunk));
 export default store;
 
